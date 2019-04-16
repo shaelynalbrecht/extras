@@ -9,11 +9,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open%20Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open%20Sans%20Condensed:300' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
   </head>
   <body>
     <a href="#main" class="skip"> Skip to Content</a>
     <header>
-      <nav>
+      <nav class="navbar">
           <a href="index.html">Home</a>
           <a href="competitive_twirling.html" class="current">Competitive Twirling</a>
           <a href="my_story.html">My Story</a>
@@ -43,6 +46,29 @@
         <p>Teams compete to their own music, typically with up to 8 people. There are also Corps events that have many more people and can also incorporate props besides batons.</p>
 
         <h2><span>Twirling Organizations</span></h2>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/_nbta.png" alt="National Baton Twirling Association Logo">
+            </div>
+            <div class="flip-card-back">
+              <p>National Baton Twirling Association</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/_usta.png" alt="United States Twirling Association Logo">
+            </div>
+            <div class="flip-card-back">
+              <p>United States Twirling Association</p>
+            </div>
+          </div>
+        </div>
+
         <p>The two main organizations in baton twirling are NBTA (National Baton Twirling Association) and USTA (United States Twirling Association). Other well-known organizations are WTA (World Twirling Association), DMA (Drum Majorettes of America), and TU (Twirling Unlimited); they have smaller followings than NBTA and USTA.
 
         One of the defining differences between the organizations is that NBTA does not allow gymnastics, whereas USTA does. NBTA has longer time-limits allotted for their routines than USTA does. NBTA also places more emphasis on catching the baton, whereas USTA places more emphasis on the difficulty of the trick attempted.
@@ -54,5 +80,21 @@
     <footer>
       <p>&copy; Shaelyn Albrecht <span class="fas fa-star"></span></p>
     </footer>
+    <script>
+      var nav = document.querySelector('nav');
+      const navTop = nav.offsetTop;
+
+      function stickyNavigation() {
+        if (window.scrollY >= navTop) {
+          document.body.style.paddingTop = nav.offsetHeight + 'px';
+          document.body.classList.add('fixed-nav');
+        } else {
+          document.body.style.paddingTop = 0;
+          document.body.classList.remove('fixed-nav');
+        }
+      }
+
+      window.addEventListener('scroll', stickyNavigation);
+    </script>
   </body>
 </html>
