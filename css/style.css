@@ -358,8 +358,6 @@ iframe {
     top:0;
     z-index: 1;
     padding-bottom: 10vh;
-    border-width: medium;
-    border-color: #000;
   }
 
 }
